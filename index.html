@@ -6,38 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Угадай число</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
   </head>
   <body>
     <header class="header">
       <div class="header__container">
-         <div class="header__menu">
-            <button class="header__btn btn reset">Обнулить всё!</button>
-            <p class="header__between">(Между 1 и 20) <span class="header__between-text">Диапазон:</span></p>
-         </div>
-         <div class="header__text">
-            <h1 class="header__title">Угадай Число!</h1>
-            <h2 class="header__question">???</h2>
-         </div>
-   </div>
+        <div class="header__menu">
+          <button class="header__btn btn reset">Обнулить всё!</button>
+          <p class="header__between">
+            (Между 1 и 20) <span class="header__between-text">Диапазон:</span>
+          </p>
+        </div>
+        <div class="header__text">
+          <h1 class="header__title">Угадай Число!</h1>
+          <h2 class="header__question">???</h2>
+        </div>
+      </div>
     </header>
     <main class="main">
       <section class="game">
-         <div class="game__container">
-            <div class="game-right">
-               <input type="number" step="1" min="0" max="20" class="game-right__number">
-               <button type="submit" class="game-right__btn btn check">Проверить!</button>
-            </div>
-            <div class="game-left">
-               <p class="game-left__message">Начните угадывать!</p>
-               <p class="game-left__score">Очки: <span class="score">10</span></p>
-               <p class="game-left__highscore">
-                  Лучший результат: <span class="highscore">0</span>
-               </p>
-               <button type="submit" class="game-left__btn btn again">Заново!</button>
-            </div>
-         </div>
+        <div class="game__container">
+          <div class="game-right">
+            <input
+              type="number"
+              step="1"
+              min="0"
+              max="20"
+              class="game-right__number"
+            />
+            <button type="submit" class="game-right__btn btn check">
+              Проверить!
+            </button>
+          </div>
+          <div class="game-left">
+            <p class="game-left__message">Начните угадывать!</p>
+            <p class="game-left__score">Очки: <span class="score">10</span></p>
+            <p class="game-left__highscore">
+              Лучший результат: <span class="highscore">0</span>
+            </p>
+            <button type="submit" class="game-left__btn btn again">
+              Заново!
+            </button>
+          </div>
+        </div>
       </section>
     </main>
+
     <script src="js/dom.js"></script>
   </body>
 </html>
