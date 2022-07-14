@@ -4,7 +4,7 @@
 //========================================================================================================================================================
 // Переменные
 let secretNumber = Math.trunc(Math.random() * 20) + 1; // Диапазон рандома между 1 и 20
-// console.log(secretNumber);
+console.log(secretNumber);
 let score = 10;
 let highscore = 0;
 
@@ -62,11 +62,12 @@ const guessNumber = Number(number.value);
          scoreDoc.textContent = score;
       }
       else {
-         message.textContent =
-            'Game Over!';
+         document.querySelector('body').style.backgroundColor = '#000';
+         message.textContent = 'Game Over!';
          scoreDoc.textContent = 0;
       }
    }
 
 });
+
 
