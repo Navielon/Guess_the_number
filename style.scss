@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+$white: #fff;
+$dark: #000;
+$gray: #bdbdbd;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+}
+
+body{
+   text-align: center;
+   background-color: #505050;
+   font-family: 'Press Start 2P', sans-serif;
+  /* background-color: #70cc75;  */
+   color: $white;
+}
+
+.header {
+   border-bottom: 7px solid $white;
+   position: relative;
+   margin-bottom: 180px;
+   &__container{
+      max-width: 1210px;
+      padding: 0 20px;
+      margin: 0 auto;
+   }
+   // .header__menu
+   &__menu {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 35px;
+      align-items: center;
+      @media(max-width: 530px){
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+
+   // .header__btn
+   &__btn {
+   }
+
+   &__between{
+      background-color: $white;
+      padding: 6px 14px;
+      font-size: 15px;
+      color: $dark;
+      position: relative;
+      &-text{
+         position: absolute;
+         top: -25px;
+         right: 50px;
+         color: $white;
+         @media(max-width: 530px){
+            top: -25px;
+            right: 50px;
+         }
+      }
+      @media(max-width: 530px){
+         margin-top: 50px;
+      }
+   }
+   // .header__text
+   &__text {
+      margin-top: 150px;
+   }
+
+   // .header__title
+   &__title {
+      margin-bottom: 120px;
+      font-size: 50px;
+      @media (max-width: 340px){
+         font-size: 45px;
+      }
+   }
+
+   // .header__question
+   &__question {
+      font-size: 40px;
+      color: $dark;
+      position: absolute;
+      text-align: center;
+      background-color: $white;
+      padding: 20px 80px;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 50%);
+   }
+}
+
+.btn {
+   font-family: 'Press Start 2P', sans-serif;
+   border: none;
+   padding: 6px 14px;
+   font-size: 15px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all .3s ease;
+   &:hover{
+      background-color: $gray;
+   }
+}
+.reset {
+   @media (max-width: 530px){
+      padding: 15px 16px;
+   }
+}
+
+//========================================================================================================================================================
+
+.game {
+   margin-bottom: 100px;
+   // .game__container
+   &__container {
+      max-width: 1210px;
+      padding: 0 20px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      @media(max-width: 530px){
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+}
+.game-right {
+   display: flex;
+   flex-direction: column;
+   gap: 20px 0;
+   // .game-right__number
+   &__number {
+      background: none;
+      border: 4px solid $white;
+      font-family: inherit;
+      color: $white;
+      font-size: 40px;
+      padding: 40px 40px;
+      width: 250px;
+      text-align: center;
+      display: block;
+      margin-bottom: 3rem;
+      outline: none;
+      transition: .3s ease;
+      &:hover, &:focus{
+         border: 4px solid #db7e27;
+      }
+      @media (max-width: 850px) {
+         font-size: 15px;
+      }
+      @media (max-width: 650px) {
+         width: 200px;
+         font-size: 30px;
+      }
+   }
+
+   // .game-right__btn
+   &__btn {
+      padding: 15px 10px;
+   }
+}
+
+.check {
+}
+.game-left {
+   @media (max-width: 850px) {
+      font-size: 15px;
+   }
+   @media (max-width: 650px) {
+      font-size: 10px;
+      margin-top: 20px;
+    }
+    @media (max-width: 530px){
+      margin-top: 50px;
+      font-size: 15px;
+   }
+   // .game-left__message
+   &__message {
+      margin-bottom: 20px;
+     
+   }
+
+   // .game-left__score
+   &__score {
+      margin-bottom: 20px;
+   }
+
+   // .game-left__highscore
+   &__highscore {
+      margin-bottom: 108px;
+      @media (max-width: 850px) {
+         margin-bottom: 85px;
+      }
+      @media (max-width: 650px) {
+         margin-bottom: 80px;
+      }
+      @media (max-width: 530px) {
+         margin-bottom: 50px;
+         
+      }
+   }
+   &__btn {
+      padding: 15px 80px;
+      @media (max-width: 650px) {
+         padding: 15px 60px;
+      }
+      
+   }
+
+}
+
+.score {
+}
+.highscore {
+}
