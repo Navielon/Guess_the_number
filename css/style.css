@@ -29,7 +29,7 @@ body {
   padding-top: 35px;
   align-items: center;
 }
-@media (max-width: 530px) {
+@media (max-width: 750px) {
   .header__menu {
     flex-direction: column;
     align-items: center;
@@ -49,13 +49,7 @@ body {
   right: 50px;
   color: #fff;
 }
-@media (max-width: 530px) {
-  .header__between-text {
-    top: -25px;
-    right: 50px;
-  }
-}
-@media (max-width: 530px) {
+@media (max-width: 750px) {
   .header__between {
     margin-top: 50px;
   }
@@ -83,11 +77,126 @@ body {
   left: 50%;
   transform: translate(-50%, 50%);
 }
+.header-rules {
+  position: relative;
+}
+.header-rules__modal {
+  position: absolute;
+  transform: translate(15%, 30%);
+  background-color: #000000;
+  padding: 40px;
+  border-radius: 30px;
+  z-index: 55;
+  box-shadow: 2px 2px 25px #fff;
+}
+@media (max-width: 1200px) {
+  .header-rules__modal {
+    transform: translate(10%, 30%);
+  }
+}
+@media (max-width: 1050px) {
+  .header-rules__modal {
+    transform: translate(5%, 30%);
+  }
+}
+@media (max-width: 1000px) {
+  .header-rules__modal {
+    transform: translate(3%, 30%);
+  }
+}
+@media (max-width: 950px) {
+  .header-rules__modal {
+    transform: translate(1%, 30%);
+  }
+}
+@media (max-width: 930px) {
+  .header-rules__modal {
+    transform: translate(0%, 30%);
+  }
+}
+@media (max-width: 750px) {
+  .header-rules__modal {
+    transform: translate(0%, 0%);
+  }
+}
+@media (max-width: 380px) {
+  .header-rules__modal {
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 500px) {
+  .header-rules__title {
+    text-align-last: left;
+  }
+}
+@media (max-width: 440px) {
+  .header-rules__title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 380px) {
+  .header-rules__title {
+    font-size: 15px;
+  }
+}
+.header-rules__text {
+  max-width: 800px;
+  line-height: 25px;
+  margin-top: 15px;
+  text-align: left;
+}
+@media (max-width: 500px) {
+  .header-rules__text {
+    font-size: 15px;
+  }
+}
+.header-rules__close {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  font-size: 75px;
+  color: #cacaca;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.2s ease;
+}
+.header-rules__close:hover {
+  color: #444;
+}
+@media (max-width: 500px) {
+  .header-rules__close {
+    font-size: 55px;
+    top: 18px;
+    right: 25px;
+  }
+}
+@media (max-width: 380px) {
+  .header-rules__close {
+    font-size: 45px;
+    top: 26px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.hidden {
+  display: none;
+}
 
 .btn {
   font-family: "Press Start 2P", sans-serif;
   border: none;
-  padding: 6px 14px;
+  padding: 8px 14px;
   font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
@@ -97,8 +206,15 @@ body {
   background-color: #bdbdbd;
 }
 
-@media (max-width: 530px) {
+@media (max-width: 750px) {
   .reset {
+    padding: 15px 16px;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-btn__rules {
+    margin-top: 15px;
     padding: 15px 16px;
   }
 }
