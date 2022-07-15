@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Угадай число</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__container">
-        <div class="header__menu">
-          <button class="header__btn btn reset">Обнулить всё!</button>
-          <p class="header__between">
-            (Между 1 и 20) <span class="header__between-text">Диапазон:</span>
-          </p>
-        </div>
-        <div class="header__text">
-          <h1 class="header__title">Угадай Число!</h1>
-          <h2 class="header__question">???</h2>
-        </div>
+<head>
+   <meta charset="UTF-8"/>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Угадай число</title>
+   <link rel="stylesheet" href="css/style.css"/>
+	<link rel="shortcut icon" href="favicon.ico">
+</head>
+   <body>
+      <header class="header">
+         <div class="header__container">
+            <div class="header__menu">
+               <button class="header__btn btn reset">Обнулить всё!</button>
+               <button class="header-btn__rules btn rules">Правила игры!</button>
+               <p class="header__between">(Между 1 и 20) <span class="header__between-text">Диапазон:</span></p>
+            
+            </div>
+            <div class="header-rules ">
+               <div class="header-rules__modal hidden">
+                  <button class="header-rules__close">&times;</button>
+                  <h2 class="header-rules__title">Правила игры</h2>
+                  <p class="header-rules__text">
+                     Компьютер загадывает случайное число от 1 до 20. Ваша задача угадать это число. За каждый неверный вариант вы будете терять 1 очко. Всего у вас есть 10 очков. В случае, если вы не сможете угадать число, загаданное компьютером, вы проиграете. Если игрок выбрал слишком маленькое число, то в результате своего ответа он увидит "Слишком маленькое число!", если игрок наоборот ввёл слишком большое число от загаданного компьютером, то он увидит "Число слишком большое!". 
+                  </p>
+                  <p class="header-rules__text">
+                     Игра подходит для двух игроков, или более. Побеждает тот, у кого по итогу остаётся наибольшее количество очков. Удачи!
+                  </p>
+               </div>
+            </div>
+            <div class="header__text">
+               <h1 class="header__title">Угадай Число!</h1>
+               <h2 class="header__question">???</h2>
+            </div>
       </div>
-    </header>
-    <main class="main">
-      <section class="game">
-        <div class="game__container">
-          <div class="game-right">
-            <input
-              type="number"
-              step="1"
-              min="0"
-              max="20"
-              class="game-right__number"
-            />
-            <button type="submit" class="game-right__btn btn check">
-              Проверить!
-            </button>
-          </div>
-          <div class="game-left">
-            <p class="game-left__message">Начните угадывать!</p>
-            <p class="game-left__score">Очки: <span class="score">10</span></p>
-            <p class="game-left__highscore">
-              Лучший результат: <span class="highscore">0</span>
-            </p>
-            <button type="submit" class="game-left__btn btn again">
-              Заново!
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script src="js/dom.js"></script>
-  </body>
+      </header>
+      <div class="overlay hidden"></div>
+      <main class="main">
+         <section class="game"> 
+            <div class="game__container">
+               <div class="game-right">
+                  <input type="number" step="1" min="0" max="20" class="game-right__number">
+                  <button type="submit" class="game-right__btn btn check">Проверить!</button>
+               </div>
+               <div class="game-left">
+                  <p class="game-left__message">Начните угадывать!</p>
+                  <p class="game-left__score">Очки: <span class="score">10</span></p>
+                  <p class="game-left__highscore">
+                     Лучший результат: <span class="highscore">0</span>
+                  </p>
+                  <button type="submit" class="game-left__btn btn again">Заново!</button>
+               </div>
+            </div>
+         </section>
+      </main>
+      <script src="js/dom.js"></script>
+   </body>
 </html>
